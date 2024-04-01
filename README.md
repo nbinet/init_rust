@@ -24,6 +24,13 @@ Cet outil est conçu pour analyser un fichier de logs et fournir des statistique
     cargo run /chemin/vers/votre/fichier.log
     ```
 
+5. Vous pouvez ajouter un argument supplémentaire pour exécuter le programme en multi-thread :
+
+   ```bash
+    cargo run /chemin/vers/votre/fichier.log 4
+    ```
+    Ici "4" représente le nombre de thread que nous souhaitons utiliser.
+
 ## Exemple de rendu :
 
     Nombre total de requêtes: 35094647
