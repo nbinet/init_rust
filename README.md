@@ -26,7 +26,6 @@ Cet outil est conçu pour analyser un fichier de logs et fournir des statistique
 
 ## Exemple de rendu :
 
-    ```bash
     Nombre total de requêtes: 35094647
     Statut HTTP 400 : 2410
     Statut HTTP 166 : 8
@@ -51,4 +50,3 @@ Cet outil est conçu pour analyser un fichier de logs et fournir des statistique
     Nombre total d'adresses IP uniques : 13701
     Adresse IP la plus fréquente : 184.30.41.150 (33124246 requêtes, 94.39% du total)
     Temps d'exécution du script: 288.313851291 secondes.
-    ```
