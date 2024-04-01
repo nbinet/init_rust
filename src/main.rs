@@ -2,10 +2,24 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 use std::collections::HashMap;
 use std::time::Instant;
+use std::env;
 
 fn main() {
+    // Récupération des arguments
+    let args: Vec<String> = env::args().collect();
+
+    // Message d'erreur si il n'y a pas d'argument ou si il y en a plus qu'un
+    if args.len() != 2 {
+        if args.len() == 1 {
+            eprintln!("Erreur : Ce programme nécessite un argument.");
+        } else {
+            eprintln!("Erreur : Ce programme ne peut pas prendre plus d'un argument.");
+        }
+        std::process::exit(1);
+    }
+
     // Chemin vers le fichier de logs
-    let chemin_fichier_logs = "/Users/nathanbinet/Desktop/ssl_access_log";
+    let chemin_fichier_logs = &args[1];
 
     // Début du comptage du temps d'exécution
     let debut = Instant::now();
